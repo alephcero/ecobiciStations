@@ -5,7 +5,7 @@
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::Checked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Checked" id="test20170927095634546" source="/home/pipe/projects/ecobiciStations/data/test/test.shp" name="test">
+    <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Checked" id="test20170927162054515" source="/home/pipe/projects/ecobiciStations/data/test/test.shp|layerid=0|subset=&quot;fecha&quot; &lt; '2017-09-27 19:02:53.000000' AND &quot;fecha&quot; >= '2017-09-27 18:47:53.000000' " name="test">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="barrios_badata20170925171739938" source="/home/pipe/projects/ecobiciStations/data/barrios-rar/barrios_badata.shp" name="bariosColor">
@@ -19,10 +19,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>5642513.96934497356414795</xmin>
-      <ymin>6165030.79488305188715458</ymin>
-      <xmax>5652161.52459727972745895</xmax>
-      <ymax>6173450.76328171975910664</ymax>
+      <xmin>5641968.72722998447716236</xmin>
+      <ymin>6165486.65304476395249367</ymin>
+      <xmax>5651616.28248229064047337</xmax>
+      <ymax>6173906.62144343182444572</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -42,6 +42,7 @@
     <layer_coordinate_transform_info>
       <layer_coordinate_transform destAuthId="EPSG:22185" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="barrios_badata20170925171739938"/>
       <layer_coordinate_transform destAuthId="EPSG:22185" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="test20170927093745848"/>
+      <layer_coordinate_transform destAuthId="EPSG:22185" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="test20170927162054515"/>
       <layer_coordinate_transform destAuthId="EPSG:22185" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="barrios_badata20170925172202741"/>
       <layer_coordinate_transform destAuthId="EPSG:22185" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="estacionXcomunaMadurgada20170925171722957"/>
       <layer_coordinate_transform destAuthId="EPSG:22185" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="estacionXcomunaMadurgada20170925174015664"/>
@@ -53,13 +54,13 @@
     <custom-order enabled="0">
       <item>barrios_badata20170925171739938</item>
       <item>barrios_badata20170925172202741</item>
-      <item>test20170927095634546</item>
+      <item>test20170927162054515</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
     <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="test" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="test20170927095634546" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="test20170927162054515" visible="1"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="bariosColor" showFeatureCount="0">
@@ -974,8 +975,8 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>test20170927095634546</id>
-      <datasource>./data/test/test.shp</datasource>
+      <id>test20170927162054515</id>
+      <datasource>./data/test/test.shp|layerid=0|subset="fecha" &lt; '2017-09-27 19:02:53.000000' AND "fecha" >= '2017-09-27 18:47:53.000000' </datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1674,6 +1675,27 @@ def my_form_open(dialog, layer, feature):
       <Absolute type="bool">false</Absolute>
     </Paths>
     <WMSServiceTitle type="QString"></WMSServiceTitle>
+    <TimeManager>
+      <labelBgColor type="QString">white</labelBgColor>
+      <timeFrameSize type="int">15</timeFrameSize>
+      <labelSize type="int">10</labelSize>
+      <mode type="int">0</mode>
+      <timeLayerManager type="QString">2017-09-27 11:47:53;2017-09-27 15:50:49;2017-09-27 18:47:53</timeLayerManager>
+      <labelFont type="QString">Arial</labelFont>
+      <digits type="int">4</digits>
+      <timeFrameType type="QString">minutes</timeFrameType>
+      <active type="int">1</active>
+      <labelColor type="QString">black</labelColor>
+      <currentMapTimePosition type="QString">2017-09-27 18:47:53</currentMapTimePosition>
+      <loopAnimation type="int">0</loopAnimation>
+      <labelPlacement type="QString">SE</labelPlacement>
+      <animationFrameLength type="int">500</animationFrameLength>
+      <timeLayerList type="QStringList">
+        <value>test20170927162054515;;fecha;fecha;True;%Y-%m-%d %H:%M:%S.%f;0;;False;No interpolation (faster);True;False</value>
+      </timeLayerList>
+      <playBackwards type="int">0</playBackwards>
+      <labelFormat type="QString">%Y-%m-%d %H:%M:%S</labelFormat>
+    </TimeManager>
     <WFSLayers type="QStringList"/>
     <WMSContactMail type="QString"></WMSContactMail>
     <PositionPrecision>
